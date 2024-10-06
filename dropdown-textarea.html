@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Feedback Pelanggan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Form Feedback Pelanggan</h2>
+    <form action="/submit_feedback" method="post">
+
+        <!-- Dropdown untuk Topik Feedback -->
+        <label for="topik">Pilih Topik Feedback:</label>
+        <select id="topik" name="topik" required>
+            <option value="Pelayanan">Pelayanan</option>
+            <option value="Produk">Produk</option>
+            <option value="Lainnya">Lainnya</option>
+        </select>
+
+        <!-- Textarea untuk Detail Feedback -->
+        <label for="feedback">Masukkan Detail Feedback Anda:</label>
+        <textarea id="feedback" name="feedback" rows="5" required></textarea>
+
+        <!-- Tombol Submit -->
+        <button type="submit">Kirim Feedback</button>
+
+    </form>
+
+</body>
+</html>
